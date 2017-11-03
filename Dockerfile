@@ -7,4 +7,8 @@ MAINTAINER OneSpot <dev@onespot.com>
 # su-exec: sudo replacement
 RUN addgroup onespot && \
     adduser -S -G onespot onespot && \
+    mkdir /tmp/kafka-streams && \
+    chown onespot:onespot /tmp/kafka-streams && \
     apk add --no-cache bash dumb-init su-exec ca-certificates
+
+VOLUME /tmp/kafka-streams
