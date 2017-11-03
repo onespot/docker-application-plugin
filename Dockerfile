@@ -6,9 +6,9 @@ MAINTAINER OneSpot <dev@onespot.com>
 # https://github.com/yelp/dumb-init: lightweight init system
 # su-exec: sudo replacement
 RUN addgroup onespot && \
-    adduser -S -G onespot onespot && \
+    useradd -M -g onespot onespot && \
     mkdir /tmp/kafka-streams && \
     chown onespot:onespot /tmp/kafka-streams && \
-    apk add --no-cache bash dumb-init su-exec ca-certificates
+    apt-get update && apt-get install dumb-init gosu
 
 VOLUME /tmp/kafka-streams
