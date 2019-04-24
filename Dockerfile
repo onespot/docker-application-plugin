@@ -1,4 +1,4 @@
-FROM openjdk:8u141-jdk
+FROM openjdk:8u212-jdk
 MAINTAINER OneSpot <dev@onespot.com>
 
 # Create a onespot group and user.
