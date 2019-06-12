@@ -10,3 +10,5 @@ RUN addgroup onespot && \
     mkdir /tmp/kafka-streams && \
     chown onespot:onespot /tmp/kafka-streams && \
     apt-get update && apt-get install dumb-init gosu
+
+VOLUME /tmp/kafka-streams
